@@ -56,7 +56,7 @@ function Register() {
         <button type="submit" className="login-btn">
           Register
         </button>
-        <button className="login-btn" onClick={() => navigate("/")}>
+        <button type="button" className="login-btn" onClick={() => navigate("/")}>
           Login
         </button>
       </form>
