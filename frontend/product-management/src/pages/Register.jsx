@@ -59,6 +59,7 @@ function Register() {
         <button type="button" className="login-btn" onClick={() => navigate("/")}>
           Login
         </button>
+        <a style={{marginTop: "12px"}} href="/">Arleady have account? Sign in here!</a>
       </form>
     </div>
   );
