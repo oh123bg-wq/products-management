@@ -9,7 +9,7 @@ require("dotenv").config();
 
 const corsHandler = cors({
     origin: "*",
-    methods: "GET,POST,PUT,DELETE",
+    methods: "GET,POST,PUT,DELETE,PATCH",
     allowedHeaders: ["Content-Type", "Authorization"],
     optionsSuccessStatus: 200,
     preflightContinue: true

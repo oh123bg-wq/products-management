@@ -18,9 +18,16 @@ exports.addNewProduct = async (req, res) => {
 
 exports.editProduct = async (req, res) => {                                      // Add this so press the send button 1 time than can 
     try {                                                                              // show the updated data, dont need press 2 times
-        const updatedProduct = await Product.findOneAndUpdate(req.params.id, req.body,{ new: true });
+        const updatedProduct = await Product.findOneAndUpdate({_id: req.params.id}, req.body, { new: true });
         res.json(updatedProduct);
     } catch (err) {
+        console.log(err)
         res.status(500).json(err);
     }
 };
+
+exports.deleteProduct = async (req, res) => {
+    const { id } = req.params
+    const editedProduct = await Product.findOneAndDelete({_id: id})
+    res.status(204).json()
+}
